@@ -14,27 +14,36 @@ namespace FluentSubstring
         private int endIndex;
         private SelectOperation previous;
         private string originalString;
-
+        /// <summary>
+        /// Original string passed in
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public string OriginalString
         {
             get { return originalString; }
             set { originalString = value; }
         }
-
+        /// <summary>
+        /// Beginning index of this substring
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public int BeginIndex
         {
             get { return beginIndex; }
             set { beginIndex = value; }
         }
-
+        /// <summary>
+        /// Ending index of this substring
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public int EndIndex
         {
             get { return endIndex; }
             set { endIndex = value; }
         }
+        /// <summary>
+        /// last operation. either from or to
+        /// </summary>
         [EditorBrowsable(EditorBrowsableState.Never)]
         public SelectOperation PreviousOperation
         {
@@ -58,6 +67,12 @@ namespace FluentSubstring
                 return length;
             }
         }
+        /// <summary>
+        /// Explicitly creates a new string using starting and end indices
+        /// </summary>
+        /// <returns>
+        ///    A new string instance
+        /// </returns>
         public override string ToString()
         {
             string stringRepresentation = null;

@@ -7,6 +7,7 @@ namespace FluentSubstring
 {
     internal static class StringHelper
     {
+
         public static int IndexOf(string haystack, string needle, int beginIndex, int nthOccurence)
         {
             if (nthOccurence <= 0)
@@ -53,6 +54,7 @@ namespace FluentSubstring
         }
         public static int IndexOf(string haystack, string needle)
         {
+            //can replace later on with more efficient algo than linear
             return haystack.IndexOf(needle);
         }
     }
