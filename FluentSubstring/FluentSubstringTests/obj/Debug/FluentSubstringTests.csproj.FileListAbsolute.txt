@@ -1,0 +1,9 @@
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\bin\Debug\FluentSubstringTests.dll
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\bin\Debug\FluentSubstringTests.pdb
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\bin\Debug\FluentSubstring.dll
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\bin\Debug\nunit.framework.dll
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\bin\Debug\nunit.framework.xml
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\bin\Debug\FluentSubstring.pdb
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\obj\Debug\FluentSubstringTests.dll
+D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstringTests\obj\Debug\FluentSubstringTests.pdb
