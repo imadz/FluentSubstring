@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSubstring", "FluentSubstring\FluentSubstring.csproj", "{6F1F1055-BCA6-4600-840F-1BCB9DDF0FBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentSubstringTests", "FluentSubstringTests\FluentSubstringTests.csproj", "{72E01B7D-8FC1-4C3C-B4B2-0FB93CEEAC36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F1F1055-BCA6-4600-840F-1BCB9DDF0FBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F1F1055-BCA6-4600-840F-1BCB9DDF0FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F1F1055-BCA6-4600-840F-1BCB9DDF0FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F1F1055-BCA6-4600-840F-1BCB9DDF0FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E01B7D-8FC1-4C3C-B4B2-0FB93CEEAC36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E01B7D-8FC1-4C3C-B4B2-0FB93CEEAC36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E01B7D-8FC1-4C3C-B4B2-0FB93CEEAC36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E01B7D-8FC1-4C3C-B4B2-0FB93CEEAC36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
