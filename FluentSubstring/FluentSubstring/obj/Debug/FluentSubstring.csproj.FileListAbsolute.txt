@@ -1,5 +1,0 @@
-D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstring\bin\Debug\FluentSubstring.dll
-D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstring\bin\Debug\FluentSubstring.pdb
-D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstring\obj\Debug\ResolveAssemblyReference.cache
-D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstring\obj\Debug\FluentSubstring.dll
-D:\Documents and Settings\hzhang\Desktop\git\FluentSubstring\FluentSubstring\obj\Debug\FluentSubstring.pdb
