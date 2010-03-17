@@ -11,13 +11,19 @@ namespace FluentSubstringTests
     public class StringHelperTest
     {
         [Test]
-        public void TestIndexOfNoArgs()
+        public void TestIndexOfEndIndex()
         {
-            string test = "abcdefghijk lmnopqrstuvwxyz";
-            Assert.That(StringHelper.IndexOf(test, "a"), Is.EqualTo(0));
-            Assert.That(StringHelper.IndexOf(test, "b"), Is.EqualTo(1));
-            Assert.That(StringHelper.IndexOf(test, "z"), Is.EqualTo(test.Length - 1));
-            Assert.That(StringHelper.IndexOf(test, "*"), Is.EqualTo(-1));
+            Assert.That(StringHelper.IndexOf("abcde", "c", 0, 1, 0), Is.EqualTo(-1));
+            Assert.That(StringHelper.IndexOf("abcde", "c", 0, 1, 1), Is.EqualTo(-1));
+            Assert.That(StringHelper.IndexOf("abcde", "c", 0, 1, 2), Is.EqualTo(2));
+            Assert.That(StringHelper.IndexOf("abcde", "c", 0, 1, 4), Is.EqualTo(2));
+        }
+        [Test]
+        public void TestReverseIndexOfEndIndex()
+        {
+            Assert.That(StringHelper.ReverseIndexOf("abcde", "c", 4, 1, 0), Is.EqualTo(2));
+            Assert.That(StringHelper.ReverseIndexOf("abcde", "c", 4, 1, 2), Is.EqualTo(2));
+            Assert.That(StringHelper.ReverseIndexOf("abcde", "c", 4, 1, 3), Is.EqualTo(-1));
         }
         [Test]
         public void TestIndexOf()

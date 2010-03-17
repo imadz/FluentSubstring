@@ -85,7 +85,40 @@ namespace FluentStringSearchTests
             Assert.That(("a".AsFluent() + "b".AsFluent()).ToString(), Is.EqualTo("ab"));
             Assert.That(("a".AsFluent().Concat("b".AsFluent())).ToString(), Is.EqualTo("ab"));
         }
+        [Test]
+        public void Test_Before()
+        {
+            Assert.That("ab".AsFluent().To(Before.The(1.st("b"))).ToString(), Is.EqualTo("a"));
+        }
+        [Test]
+        public void Test_After()
+        {
+            Assert.That("ab".AsFluent().From(After.The(1.st("a"))).ToString(), Is.EqualTo("b"));
+        }
+        [Test]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Test_Before_Invalid()
+        {
+            Assert.That("a".AsFluent().From(Before.The(1.st("a"))).ToString(), Is.EqualTo(""));
+        }
+        [Test]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Test_After_Invalid()
+        {
+            Assert.That("a".AsFluent().From(After.The(1.st("a"))).ToString(), Is.EqualTo(""));
+        }
 
+        [Test]
+        public void Test_Chained_From()
+        {
+            Assert.That("ababc".AsFluent().From(1.st("b")).From(1.st("a")).ToString(), Is.EqualTo("abc"));
+        }
 
+        [Test]
+        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        public void Test_Chained_To()
+        {
+            "ababc".AsFluent().To(2.nd("a")).To(1.st("c"));
+        }
     }
 }

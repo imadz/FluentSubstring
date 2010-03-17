@@ -104,7 +104,16 @@ namespace FluentSubstring
             NumericStringSelector clone = new NumericStringSelector(selector.Number, selector.SearchString, selector.Direction, selector.Skipped + n);
             return clone;
         }
+        public static NumericStringSelector operator +(int n, NumericStringSelector selector)
+        {
+            NumericStringSelector clone = new NumericStringSelector(selector.Number, selector.SearchString, selector.Direction, selector.Skipped + n);
+            return clone;
+        }
         public static NumericStringSelector operator -(NumericStringSelector selector, int n)
+        {
+            return selector + (-n);
+        }
+        public static NumericStringSelector operator -(int n, NumericStringSelector selector)
         {
             return selector + (-n);
         }

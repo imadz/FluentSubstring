@@ -80,6 +80,10 @@ namespace FluentSubstring
             {
                 stringRepresentation = OriginalString;
             }
+            else if (EndIndex < BeginIndex)
+            {
+                throw new ArgumentOutOfRangeException("EndIndex cannot be before BeginIndex");
+            }
             else
             {
                 stringRepresentation = OriginalString.Substring(BeginIndex, EndIndex - BeginIndex + 1);

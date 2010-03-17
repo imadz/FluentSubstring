@@ -86,7 +86,7 @@ namespace FluentSubstring
             switch (context.Direction)
             {
                 case NumericStringSelector.ContextDirection.Forward:
-                    nIndex = StringHelper.IndexOf(OriginalString, context.SearchString, BeginIndex, context.Number);
+                    nIndex = StringHelper.IndexOf(OriginalString, context.SearchString, BeginIndex, context.Number, EndIndex);
                     break;
                 case NumericStringSelector.ContextDirection.Backward:
                     nIndex = StringHelper.ReverseIndexOf(OriginalString, context.SearchString, EndIndex, context.Number);

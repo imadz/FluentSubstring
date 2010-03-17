@@ -49,7 +49,7 @@
   <ItemGroup>
     <Compile Include="AbstractFluentSubstringBase.cs" />
     <Compile Include="Dummy\DummyFluentSubstring.cs" />
-    <Compile Include="EndOf.cs" />
+    <Compile Include="After.cs" />
     <Compile Include="IBoundedString.cs" />
     <Compile Include="INumericStringSelector.cs" />
     <Compile Include="IStateAware.cs" />
