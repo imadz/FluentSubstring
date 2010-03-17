@@ -33,16 +33,7 @@ namespace FluentSubstring
         }
         public FluentString True(Func<bool> condition)
         {
-            if (condition())
-            {
-                return this;
-            }
-            else
-            {
-                return DummyFluentSubstring.Create();
-            }
-
-
+            return (condition()) ? (FluentString)this : DummyFluentSubstring.Create();
         }
 
         public FluentString False(Func<bool> condition)
@@ -59,26 +50,13 @@ namespace FluentSubstring
 
         public FluentString IsEmpty()
         {
-            if (BeginIndex == EndIndex)
-            {
-                return this;
-            }
-            else
-            {
-                return DummyFluentSubstring.Create();
-            }
+            return (BeginIndex == EndIndex) ? (FluentString)this : DummyFluentSubstring.Create();
+
         }
 
         public FluentString NotEmpty()
         {
-            if (EndIndex > BeginIndex)
-            {
-                return this;
-            }
-            else
-            {
-                return DummyFluentSubstring.Create();
-            }
+            return (EndIndex > BeginIndex) ? (FluentString)this : DummyFluentSubstring.Create();
 
         }
         [EditorBrowsable(EditorBrowsableState.Never)]
@@ -87,28 +65,15 @@ namespace FluentSubstring
             return base.ToString();
         }
 
-
-        #endregion
-
-        #region IConditionMatcher Members
-
-
         public FluentString StringValid(Func<string, bool> predicate)
         {
-            if (predicate(ToString()))
-            {
-                return this;
-            }
-            else
-            {
-                return DummyFluentSubstring.Create();
-            }
+            return (predicate(ToString())) ? (FluentString)this : DummyFluentSubstring.Create();
         }
 
         #endregion
     }
     public interface IConditionMatcher
-    {   
+    {
         /// <summary>
         /// Continues if and only if the condition delegate evaluates to true
         /// </summary>

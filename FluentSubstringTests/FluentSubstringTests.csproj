@@ -51,6 +51,7 @@
     <Compile Include="FluentStringProceedTest.cs" />
     <Compile Include="NumericExtensionTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SampleUseTest.cs" />
     <Compile Include="StringHelperTest.cs" />
     <Compile Include="FluentSubstringTest.cs" />
   </ItemGroup>

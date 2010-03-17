@@ -66,21 +66,25 @@ namespace FluentSubstring
         /// </summary>
         protected internal int Number { get; set; }
         protected internal ContextDirection Direction { get; set; }
+        protected internal int Skipped { get; set; }
         /// <summary>
         /// The needle used to search the haystack
         /// </summary>
         protected internal string SearchString { get; set; }
         internal NumericStringSelector()
+            : this(0, String.Empty, ContextDirection.Forward)
         {
-            Number = 0;
-            this.Direction = ContextDirection.Forward;
-            this.SearchString = String.Empty;
         }
         internal NumericStringSelector(int number, string searchString, ContextDirection direction)
+            : this(number, searchString, direction, 0)
+        {
+        }
+        internal NumericStringSelector(int number, string searchString, ContextDirection direction, int skipped)
         {
             Number = number;
-            this.Direction = direction;
-            this.SearchString = searchString;
+            Direction = direction;
+            SearchString = searchString;
+            Skipped = skipped;
         }
         /// <summary>
         /// Reverses the previous NumberStringSelector.
@@ -93,6 +97,16 @@ namespace FluentSubstring
         {
             NumericStringSelector clone = new NumericStringSelector(Number, SearchString, ContextDirection.Backward);
             return clone;
+        }
+
+        public static NumericStringSelector operator +(NumericStringSelector selector, int n)
+        {
+            NumericStringSelector clone = new NumericStringSelector(selector.Number, selector.SearchString, selector.Direction, selector.Skipped + n);
+            return clone;
+        }
+        public static NumericStringSelector operator -(NumericStringSelector selector, int n)
+        {
+            return selector + (-n);
         }
 
     }

@@ -86,10 +86,10 @@ namespace FluentSubstring
             switch (context.Direction)
             {
                 case NumericStringSelector.ContextDirection.Forward:
-                    nIndex = StringHelper.IndexOf(OriginalString, context.SearchString, 0, context.Number);
+                    nIndex = StringHelper.IndexOf(OriginalString, context.SearchString, BeginIndex, context.Number);
                     break;
                 case NumericStringSelector.ContextDirection.Backward:
-                    nIndex = StringHelper.ReverseIndexOf(OriginalString, context.SearchString, OriginalString.Length - 1, context.Number);
+                    nIndex = StringHelper.ReverseIndexOf(OriginalString, context.SearchString, EndIndex, context.Number);
                     break;
             }
             //if we can't find something we want an exception always
@@ -97,15 +97,19 @@ namespace FluentSubstring
             {
                 throw new ArgumentOutOfRangeException("Could not find " + context.SearchString);
             }
-            else if (isFrom)
-            {
-                //if last operation was from, we want to change start
-                result = new FluentString(OriginalString, PreviousOperation, nIndex, EndIndex);
-            }
             else
             {
-                //if last operation was to, we want to change the end
-                result = new FluentString(OriginalString, PreviousOperation, BeginIndex, nIndex);
+                nIndex += context.Skipped;
+                if (isFrom)
+                {
+                    //if last operation was from, we want to change start
+                    result = new FluentString(OriginalString, PreviousOperation, nIndex, EndIndex);
+                }
+                else
+                {
+                    //if last operation was to, we want to change the end
+                    result = new FluentString(OriginalString, PreviousOperation, BeginIndex, nIndex);
+                }
             }
             return result;
         }
